@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Save Data Using Arrays</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="formContainer">
+      <div class="row">
+        <label for="fullname">fullname :</label>
+        <br>
+        <input onclick="error2()" type="text" name="fullname" id="fullname" />
+      </div>
+      <div class="row">
+        <label for="email">email :</label>
+        <br>
+        <input type="email" name="email" id="email" />
+      </div>
+        <label for="password">password :</label>
+        <div class="row-password">
+        <input type="password" name="password" id="password" />
+        <div class="eyeContainer">
+            <img src="./eye-slash-fill.svg" alt="eye" id="eye" onclick="toggle()">
+        </div>
+        </div>
+        <br>
+      <button type="submit" onclick="ready()">Submit</button>
+    </div>
+
+    <div id="errors">
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <table id="data">
+      <tr>
+        <th>fullname</th>
+        <th>email</th>
+        <th>password</th>
+      </tr>
+     
+    </table>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
