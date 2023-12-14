@@ -6,6 +6,11 @@ const table    = document.getElementById('data')
 const errors   = document.getElementById('errors')
 const eye      = document.getElementById('eye')
 const eye2      = document.getElementById('eye2')
+const information = {
+   name : "",
+   emails : "" , 
+   passwords : ""
+}
 
 function ready(){
     
@@ -31,11 +36,14 @@ function ready(){
    
 
   else{
+    information.name = fullName.value.toLowerCase()
+    information.emails = email.value.toLowerCase()
+    information.passwords = password.value.toLowerCase()
   
-  table.innerHTML += `<tbody id="remove-${fullName.value.toLowerCase()}"><tr>
-  <td>${fullName.value.toLowerCase()}</td>
-  <td>${email.value.toLowerCase()}</td>
-  <td>${password.value.toLowerCase()}</td>
+  table.innerHTML += `<tbody id="remove-${information.name.toLowerCase()}"><tr>
+  <td>${information.name}</td>
+  <td>${information.emails}</td>
+  <td>${information.passwords}</td>
 </tr>
 </tbody> `
    
